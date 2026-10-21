@@ -358,7 +358,6 @@ footer { padding: 28px 0 40px; font-size: 14px; color: var(--ink-3); }
 
 <div class="toast" role="status" aria-live="polite"></div>
 
-<script src="images/logos/manifest.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 <script>
 /* =========================================================
@@ -601,9 +600,9 @@ function logoPath(slug, type, variant, ext) {
    including extra sets like magnet or athletics logos. The Logos tab only overrides
    titles, descriptions, and group names. Without the manifest, pages fall back to the
    Logos tab or the standard three logos. */
-const MANIFEST = window.LOGO_FILES || null;
+let MANIFEST = null;   // filled in at startup from images/logos/manifest.js
 // Custom labels from the renamer, with your capitalization (e.g. "STEAM seal")
-const LABELS = Object.assign({ names: {}, sets: {}, variants: {} }, window.LOGO_LABELS || {});
+let LABELS = { names: {}, sets: {}, variants: {} };
 const variantLabel = v => LABELS.variants[v] || LABELS.names[v] || VARIANT_LABELS[v] || humanize(v);
 const SET_TITLES = { magnet: 'Magnet program', athletics: 'Athletics', band: 'Band' };
 const SET_ORDER = ['campus', 'magnet', 'athletics', 'band'];
@@ -1235,7 +1234,22 @@ document.addEventListener('click', e => {
 });
 window.addEventListener('hashchange', route);
 
+// The logo file list is loaded fresh on every visit (the ?v= stops browsers and the host
+// from serving an older copy), so new logos show up as soon as the new list is uploaded.
+function loadManifest() {
+  return new Promise(resolve => {
+    const s = document.createElement('script');
+    s.src = `images/logos/manifest.js?v=${Date.now()}`;
+    s.onload = s.onerror = () => {
+      MANIFEST = window.LOGO_FILES || null;
+      LABELS = Object.assign({ names: {}, sets: {}, variants: {} }, window.LOGO_LABELS || {});
+      resolve();
+    };
+    document.head.appendChild(s);
+  });
+}
 (async () => {
+  await loadManifest();
   try {
     [campuses, logoRows] = await loadData();
   } catch (err) {
