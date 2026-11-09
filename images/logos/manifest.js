@@ -1,5 +1,5 @@
 // Logo file list for the Campus Mascot/Logo Library.
-// Written by the logo renamer on October 21, 2026. Update it with the renamer rather than by hand.
+// Written by the logo renamer on November 9, 2026. Update it with the renamer rather than by hand.
 window.LOGO_FILES = {
  "aikin": [
   "aikin-horizontal-black-white.ai",
@@ -124,7 +124,40 @@ window.LOGO_FILES = {
   "berkner-primary-full-color.jpg",
   "berkner-primary-full-color.png",
   "berkner-primary-white.ai",
-  "berkner-primary-white.png"
+  "berkner-primary-white.png",
+  "berkner-stem-badge-black-white.ai",
+  "berkner-stem-badge-black-white.jpg",
+  "berkner-stem-badge-black-white.png",
+  "berkner-stem-badge-full-color.ai",
+  "berkner-stem-badge-full-color.jpg",
+  "berkner-stem-badge-full-color.png",
+  "berkner-stem-badge-grayscale.ai",
+  "berkner-stem-badge-grayscale.jpg",
+  "berkner-stem-badge-grayscale.png",
+  "berkner-stem-badge-white.ai",
+  "berkner-stem-badge-white.png",
+  "berkner-stem-horizontal-black-white.ai",
+  "berkner-stem-horizontal-black-white.jpg",
+  "berkner-stem-horizontal-black-white.png",
+  "berkner-stem-horizontal-full-color.ai",
+  "berkner-stem-horizontal-full-color.jpg",
+  "berkner-stem-horizontal-full-color.png",
+  "berkner-stem-horizontal-grayscale.ai",
+  "berkner-stem-horizontal-grayscale.jpg",
+  "berkner-stem-horizontal-grayscale.png",
+  "berkner-stem-horizontal-white.ai",
+  "berkner-stem-horizontal-white.png",
+  "berkner-stem-primary-black-white.ai",
+  "berkner-stem-primary-black-white.jpg",
+  "berkner-stem-primary-black-white.png",
+  "berkner-stem-primary-full-color.ai",
+  "berkner-stem-primary-full-color.jpg",
+  "berkner-stem-primary-full-color.png",
+  "berkner-stem-primary-grayscale.ai",
+  "berkner-stem-primary-grayscale.jpg",
+  "berkner-stem-primary-grayscale.png",
+  "berkner-stem-primary-white.ai",
+  "berkner-stem-primary-white.png"
  ],
  "big-springs": [
   "big-springs-bobcat-head-black-white.ai",
@@ -1565,7 +1598,8 @@ window.LOGO_LABELS = {
   "manufacturing": "Manufacturing",
   "technical-theater": "Technical Theater",
   "law": "Law",
-  "theater-performance": "Theater Performance"
+  "theater-performance": "Theater Performance",
+  "badge": "Badge"
  },
  "sets": {
   "daep": "DAEP",
@@ -1574,11 +1608,13 @@ window.LOGO_LABELS = {
   "little-eagles": "Little Eagles",
   "little-mustangs": "Little Mustangs",
   "little-rams-wildcats": "Little Rams and Wildcats",
-  "program-icons": "Program icons"
+  "program-icons": "Program icons",
+  "stem": "Berkner STEM Center"
  },
  "variants": {
   "2-color": "2-color",
   "3-color": "3-color",
-  "wordswhite": "Words in white"
+  "wordswhite": "Words in white",
+  "grayscale": "Grayscale"
  }
 };
