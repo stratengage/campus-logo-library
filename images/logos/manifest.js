@@ -1,5 +1,5 @@
 // Logo file list for the Campus Mascot/Logo Library.
-// Written by the logo renamer on November 11, 2026. Update it with the renamer rather than by hand.
+// Written by the logo renamer on November 13, 2026. Update it with the renamer rather than by hand.
 window.LOGO_FILES = {
  "aikin": [
   "aikin-horizontal-black-white.ai",
@@ -1023,6 +1023,27 @@ window.LOGO_FILES = {
   "prestonwood-primary-white.ai",
   "prestonwood-primary-white.png"
  ],
+ "program": [
+  "program-program-attend-black-white.ai",
+  "program-program-attend-black-white.jpg",
+  "program-program-attend-black-white.png",
+  "program-program-attend-full-color.ai",
+  "program-program-attend-full-color.jpg",
+  "program-program-attend-full-color.png",
+  "program-program-attend-white.ai",
+  "program-program-attend-white.png",
+  "program-program-ccmr-full-color.ai",
+  "program-program-ccmr-full-color.jpg",
+  "program-program-ccmr-full-color.png",
+  "program-program-primary-black-white.ai",
+  "program-program-primary-black-white.jpg",
+  "program-program-primary-black-white.png",
+  "program-program-primary-full-color.ai",
+  "program-program-primary-full-color.jpg",
+  "program-program-primary-full-color.png",
+  "program-program-primary-white.ai",
+  "program-program-primary-white.png"
+ ],
  "richardson-heights": [
   "richardson-heights-horizontal-black-white.ai",
   "richardson-heights-horizontal-black-white.jpg",
@@ -1616,8 +1637,6 @@ window.LOGO_LABELS = {
   "owl": "Little Owl",
   "mustang": "Little Mustang",
   "shield": "Shield",
-  "communication-arts": "Communication Arts",
-  "culinary-arts": "Culinary Arts",
   "robotics": "Robotics",
   "theater-arts": "Theater Arts",
   "visual-arts": "Visual Arts",
@@ -1627,17 +1646,21 @@ window.LOGO_LABELS = {
   "photography": "Photography",
   "computer-science": "Computer Science",
   "communications": "Communications",
-  "studio-art": "Studio Art",
   "manufacturing": "Manufacturing",
-  "technical-theater": "Technical Theater",
   "law": "Law",
-  "theater-performance": "Theater Performance",
   "badge": "Badge",
   "comsci": "Computer Science",
   "culinary": "Culinary Arts",
   "studioart": "Studio Art",
   "techtheater": "Technical Theater",
-  "pertheater": "Theater Performance"
+  "pertheater": "Theater Performance",
+  "communication-arts": "Communication Arts",
+  "culinary-arts": "Culinary Arts",
+  "studio-art": "Studio Art",
+  "technical-theater": "Technical Theater",
+  "theater-performance": "Theater Performance",
+  "ccmr": "CCMR",
+  "attend": "Attendance Matters"
  },
  "sets": {
   "daep": "DAEP",
@@ -1646,13 +1669,15 @@ window.LOGO_LABELS = {
   "little-eagles": "Little Eagles",
   "little-mustangs": "Little Mustangs",
   "little-rams-wildcats": "Little Rams and Wildcats",
-  "program-icons": "Program icons",
-  "stem": "Berkner STEM Center"
+  "program-icons": "Magnet program icons",
+  "stem": "Berkner STEM Center",
+  "program": "Program/theme logos"
  },
  "variants": {
   "2-color": "2-color",
   "3-color": "3-color",
   "wordswhite": "Words in white",
   "grayscale": "Grayscale"
- }
+ },
+ "seeded": true
 };
