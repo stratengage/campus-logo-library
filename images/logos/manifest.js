@@ -1084,6 +1084,7 @@ window.LOGO_FILES = {
   "program-pt-pta-horizmascot.png",
   "program-pt-pta-stackblock.ai",
   "program-pt-pta-stackblock.jpg",
+  "program-pt-pta-stackblock.png",
   "program-pt-pta-stackmas.ai",
   "program-pt-pta-stackmas.jpg",
   "program-pt-pta-stackmas.png",
