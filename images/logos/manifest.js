@@ -1024,17 +1024,6 @@ window.LOGO_FILES = {
   "prestonwood-primary-white.png"
  ],
  "program": [
-  "program-program-attend-black-white.ai",
-  "program-program-attend-black-white.jpg",
-  "program-program-attend-black-white.png",
-  "program-program-attend-full-color.ai",
-  "program-program-attend-full-color.jpg",
-  "program-program-attend-full-color.png",
-  "program-program-attend-white.ai",
-  "program-program-attend-white.png",
-  "program-program-ccmr-full-color.ai",
-  "program-program-ccmr-full-color.jpg",
-  "program-program-ccmr-full-color.png",
   "program-pt-attend-full-color.ai",
   "program-pt-attend-full-color.jpg",
   "program-pt-attend-full-color.png",
@@ -1663,9 +1652,7 @@ window.LOGO_LABELS = {
   "technical-theater": "Technical Theater",
   "theater-performance": "Theater Performance",
   "ccmr": "CCMR",
-  "attend": "Attendance Matters",
-  "program-attend": "Program attend",
-  "program-ccmr": "Program ccmr"
+  "attend": "Attendance Matters"
  },
  "sets": {
   "daep": "DAEP",
