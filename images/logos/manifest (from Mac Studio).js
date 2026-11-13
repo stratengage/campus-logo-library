@@ -1034,15 +1034,7 @@ window.LOGO_FILES = {
   "program-program-attend-white.png",
   "program-program-ccmr-full-color.ai",
   "program-program-ccmr-full-color.jpg",
-  "program-program-ccmr-full-color.png",
-  "program-program-primary-black-white.ai",
-  "program-program-primary-black-white.jpg",
-  "program-program-primary-black-white.png",
-  "program-program-primary-full-color.ai",
-  "program-program-primary-full-color.jpg",
-  "program-program-primary-full-color.png",
-  "program-program-primary-white.ai",
-  "program-program-primary-white.png"
+  "program-program-ccmr-full-color.png"
  ],
  "richardson-heights": [
   "richardson-heights-horizontal-black-white.ai",
