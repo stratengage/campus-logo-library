@@ -1156,10 +1156,33 @@ function templates(c) {
   const forCampus = key => tplRows.find(r => norm(r.template) === key && norm(r.slug) === c.slug);
   // Order follows the Templates tab; built-ins it doesn't list keep their usual place at the end
   const keys = [...new Set([...tplRows.filter(r => !norm(r.slug)).map(r => norm(r.template)), ...Object.keys(BUILTIN_TEMPLATES)])].filter(Boolean);
-  const out = [];
+  // A second or third template of the same kind comes from a numbered column on the
+  // Campuses tab (canva2_url, slides3_url, …) and slots in right after the first one.
+  const expanded = [];
   keys.forEach(key => {
-    const base = BUILTIN_TEMPLATES[key] || { tool: '', title: humanize(key), description: '', button: 'Open template', note: '' };
+    expanded.push(key);
+    Object.keys(c)
+      .map(col => (col.match(new RegExp(`^(${key}(\\d+))_url$`)) || [])[1]).filter(Boolean)
+      .sort((a, b) => parseInt(a.slice(key.length)) - parseInt(b.slice(key.length)))
+      .forEach(k => { if (!expanded.includes(k) && !keys.includes(k)) expanded.push(k); });
+  });
+  const out = [];
+  expanded.forEach(key => {
+    // canva2 starts from canva's wording, titled "Social media posts 2" until a row renames it
+    const parent = keys.includes(key) ? null : key.replace(/\d+$/, '');
+    const builtin = BUILTIN_TEMPLATES[key] || (parent && BUILTIN_TEMPLATES[parent]);
+    const base = builtin
+      ? { ...builtin, title: BUILTIN_TEMPLATES[key] ? builtin.title : `${builtin.title} ${key.slice(parent.length)}` }
+      : { tool: '', title: humanize(parent || key) + (parent ? ` ${key.slice(parent.length)}` : ''), description: '', button: 'Open template', note: '' };
     const w = { ...base };
+    const inherited = parent && everyone(parent);
+    if (inherited) {
+      w.title = inherited.title ? `${inherited.title} ${key.slice(parent.length)}` : w.title;
+      w.description = inherited.description || '';
+      w.button = inherited.button || base.button;
+      w.note = inherited.note || '';
+      if (inherited.source) w.tool = inherited.source;
+    }
     const g = everyone(key);
     if (g) {
       // A row for every campus sets the wording; a blank description or note means none
